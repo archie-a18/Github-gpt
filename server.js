@@ -50,5 +50,5 @@ app.get('/getUserData',async function(req,res){
 
 
 app.listen(4000,function(){
-    console.log("server running on port 3000");
+    console.log("server running on port 4000");
 });
