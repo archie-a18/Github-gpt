@@ -29,7 +29,6 @@ app.get('/getAccessToken',async function (req,res){
     console.log(data);
     res.json(data);
    })
-
 });
 
 
