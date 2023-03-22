@@ -13,6 +13,7 @@
       "128":"logo512.png"
     }
   },
-  "permissions": ["tabs"
+  "permissions": ["tabs",
+                  "active tabs"
   ]
 }
