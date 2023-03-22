@@ -34,17 +34,22 @@ app.get('/getAccessToken',async function (req,res){
 
 app.get('/getUserData',async function(req,res){
     req.get("Authorization");
-    await fetch("https://api.github.com/user",{
+    console.log(req.get("Authorization"))
+    const githubRes=await fetch("https://api.github.com/user",{
         method: "GET",
         headers:{
             "Authorization":req.get("Authorization")
-        }
-    }).then((response)=>{
-        return response.json();
-    }).then((data)=>{
-        console.log(data);
-        res.json(data);
-    });
+        }})
+    const data=await githubRes.json()
+    console.log(data)
+    res.json(data)
+    // }).then((response)=>{
+    //     return response.json();
+    // }).then((data)=>{
+    //     console.log("hi")
+    //     console.log(data);
+    //     res.json(data.login);
+    // });
 })
 
 
